@@ -43,6 +43,14 @@ const createSweet = (name, category, price, quantity) => {
         throw new Error("parameter missing: quantity");
     }
 
+    if (name.trim() === '') {
+        throw new Error("Name cannot be empty or only whitespace");
+    }
+
+    if (category.trim() === '') {
+        throw new Error("Category cannot be empty or only whitespace");
+    }
+
     return {
         name,
         price,
