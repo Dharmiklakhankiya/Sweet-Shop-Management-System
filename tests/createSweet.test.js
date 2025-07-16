@@ -68,3 +68,24 @@ describe('denial for missing parameters', () => {
         expect(() => createSweet()).toThrow("parameter missing: every parameter");
     });
 });
+
+describe('createSweet should not allow empty string or white space', () => {
+
+    test('should throw if name is an empty string', () => {
+        expect(() => createSweet('', 'fruit based', 20, 10)).toThrow();
+    });
+
+    test('should throw if category is an empty string', () => {
+        expect(() => createSweet('halwa', '', 20, 10)).toThrow();
+    });
+
+    test('should throw if name is only whitespace', () => {
+        expect(() => createSweet('  ', 'nut based', 30, 10)).toThrow();
+    });
+
+    test('should throw if category is only whitespace', () => {
+        expect(() => createSweet('kaju katli', '   ', 30, 10)).toThrow();
+    });
+
+})
+
