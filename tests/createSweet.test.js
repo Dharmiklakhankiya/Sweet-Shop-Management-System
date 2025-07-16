@@ -4,6 +4,8 @@
  * This test defines expected behavior before the function is implemented.
  * It checks that the function creates an object with name, category, price, and quantity.
  * It also includes a test for handling zero quantity.
+ * It ensures that the function throws an error for negative price or quantity values.
+ * The test suite is designed to ensure that the createSweet function behaves as expected.
  */
 
 const createSweet = require('../src/createSweet');
@@ -27,3 +29,15 @@ describe('createSweet', () => {
         });
     });
 });
+
+describe('createSweet should not allow negetive values',()=>{
+    test("should throw if price is negative", () => {
+        expect(() => createSweet('ladoo', 'round', -10, 5)).toThrow();
+    })
+    test('should throw if quantity is negative', () => {
+            expect(() => createSweet('barfi', 'milk based', 30, -5)).toThrow();
+        });
+    test('should throw if both are negetive',()=>{
+        expect(()=>createSweet('barfi', 'milk based', -30, -5)).toThrow();
+    })
+})
