@@ -35,42 +35,42 @@ describe('createSweet', () => {
 describe('createSweet should not allow negative values', () => {
     test('should throw if price is negative', () => {
         expect(() => createSweet('ladoo', 'round', -10, 5))
-        .toThrow();
+            .toThrow();
     });
     test('should throw if quantity is negative', () => {
         expect(() => createSweet('barfi', 'milk based', 30, -5))
-        .toThrow();
+            .toThrow();
     });
     test('should throw if both are negative', () => {
         expect(() => createSweet('barfi', 'milk based', -30, -5))
-        .toThrow();
+            .toThrow();
     });
 });
 
 describe('denial for missing parameters', () => {
     test('should throw if name is missing', () => {
         expect(() => createSweet(undefined, 'nut-based', 50, 5000))
-        .toThrow("parameter missing: name");
+            .toThrow("parameter missing: name");
     });
 
     test('should throw if category is missing', () => {
         expect(() => createSweet('kaju katli', undefined, 50, 5000))
-        .toThrow("parameter missing: category");
+            .toThrow("parameter missing: category");
     });
 
     test('should throw if price is missing', () => {
         expect(() => createSweet('kaju katli', 'nut-based', undefined, 5000))
-        .toThrow("parameter missing: price");
+            .toThrow("parameter missing: price");
     });
 
     test('should throw if quantity is missing', () => {
         expect(() => createSweet('kaju katli', 'nut-based', 50, undefined))
-        .toThrow("parameter missing: quantity");
+            .toThrow("parameter missing: quantity");
     });
 
     test('should throw if everything is missing', () => {
         expect(() => createSweet())
-        .toThrow("parameter missing: every parameter");
+            .toThrow("parameter missing: every parameter");
     });
 });
 
@@ -78,21 +78,33 @@ describe('createSweet should not allow empty string or white space', () => {
 
     test('should throw if name is an empty string', () => {
         expect(() => createSweet('', 'fruit based', 20, 10))
-        .toThrow();
+            .toThrow();
     });
 
     test('should throw if category is an empty string', () => {
         expect(() => createSweet('halwa', '', 20, 10))
-        .toThrow();
+            .toThrow();
     });
 
     test('should throw if name is only whitespace', () => {
         expect(() => createSweet('  ', 'nut based', 30, 10))
-        .toThrow();
+            .toThrow();
     });
 
     test('should throw if category is only whitespace', () => {
         expect(() => createSweet('kaju katli', '   ', 30, 10))
+            .toThrow();
+    });
+})
+
+describe('type validation', () => {
+    test('should throw if price is a string', () => {
+        expect(() => createSweet('mithai', 'misc', '50', 10))
+        .toThrow();
+    });
+
+    test('should throw if quantity is a string', () => {
+        expect(() => createSweet('mithai', 'misc', 50, '10'))
         .toThrow();
     });
 })
