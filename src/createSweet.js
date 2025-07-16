@@ -4,6 +4,7 @@
  * name, category, price, and quantity. 
  * Negative price or quantity is not allowed.
  * Add strict checks for missing values
+ * Add input validation for empty or whitespace-only name and category in createSweet
  */
 
 
