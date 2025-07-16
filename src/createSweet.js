@@ -20,27 +20,24 @@
  */
 
 const createSweet = (name, category, price, quantity) => {
-    if(price <0 || quantity < 0) {
-        throw new Error("Price and quantity must be non-negative.");
-    }
 
-    if( name === undefined && category === undefined && price === undefined && quantity === undefined){
+    if (name === undefined && category === undefined && price === undefined && quantity === undefined) {
         throw new Error("parameter missing: every parameter");
     }
 
-    if( name === undefined){
+    if (name === undefined) {
         throw new Error("parameter missing: name");
     }
 
-    if( category === undefined){
+    if (category === undefined) {
         throw new Error("parameter missing: category");
     }
 
-    if( price === undefined){
+    if (price === undefined) {
         throw new Error("parameter missing: price");
     }
 
-    if( quantity === undefined){
+    if (quantity === undefined) {
         throw new Error("parameter missing: quantity");
     }
 
@@ -50,6 +47,19 @@ const createSweet = (name, category, price, quantity) => {
 
     if (category.trim() === '') {
         throw new Error("Category cannot be empty or only whitespace");
+    }
+
+
+    if (typeof price === 'string') {
+        throw new Error("Price must be a valid number");
+    }
+
+    if (typeof quantity === 'string') {
+        throw new Error("Quantity must be a valid number");
+    }
+
+    if (price < 0 || quantity < 0) {
+        throw new Error("Price and quantity must be non-negative.");
     }
 
     return {
