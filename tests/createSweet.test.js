@@ -109,3 +109,22 @@ describe('type validation', () => {
     });
 })
 
+describe('createSweet - value edge cases', () => {
+    test('allows zero price in case of free item or discount or promotion', () => {
+        expect(createSweet('free sweet', 'promotion', 0, 10)).toEqual({
+            name: 'free sweet',
+            category: 'promotion',
+            price: 0,
+            quantity: 10
+        });
+    });
+
+    test('should handle large price and quantity', () => {
+        expect(createSweet('expensive sweet', 'luxury', 100000, 10000)).toEqual({
+            name: 'expensive sweet',
+            category: 'luxury',
+            price: 100000,
+            quantity: 10000
+        });
+    });
+});
