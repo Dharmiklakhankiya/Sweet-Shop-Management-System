@@ -3,8 +3,9 @@
  * @description Exports a factory function that creates a sweet item object with properties:
  * name, category, price, and quantity. 
  * Negative price or quantity is not allowed.
- * Add strict checks for missing values
- * Add input validation for empty or whitespace-only name and category in createSweet
+ * Add strict checks for missing values.
+ * Add input validation for empty or whitespace-only name and category in createSweet.
+ * Add input validation for data type of price and category.
  */
 
 

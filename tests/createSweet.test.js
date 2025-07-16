@@ -7,7 +7,7 @@
  * It ensures that the function throws an error for negative price or quantity values.
  * The test suite is designed to ensure that the createSweet function behaves as expected.
  * The test ensures no values are missing
- * 
+ * the test ensures datatype of quantity and price is not string
  */
 
 const createSweet = require('../src/createSweet');
