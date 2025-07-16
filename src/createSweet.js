@@ -1,4 +1,12 @@
 /**
+ * @module createSweet
+ * @description Exports a factory function that creates a sweet item object with properties:
+ * name, category, price, and quantity. 
+ * Negative price or quantity is not allowed.
+ */
+
+
+/**
  * Factory function to create a sweet item object.
  * 
  * @function createSweet
@@ -10,6 +18,9 @@
  */
 
 const createSweet = (name, category, price, quantity) => {
+    if(price <0 || quantity < 0) {
+        throw new Error("Price and quantity must be non-negative.");
+    }
     return {
         name,
         price,
