@@ -114,6 +114,18 @@ app.put('/restockSweet/:id', (req, res) => {
   }
 });
 
+app.put('/purchaseSweet/:id', (req, res) => {
+  const { id } = req.params;
+  const { amount } = req.body;
+
+  try {
+    const updatedSweet = purchaseSweet(Number(id), Number(amount));
+    res.status(200).json(updatedSweet);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
 
 
 module.exports = app;
