@@ -91,4 +91,19 @@ app.get('/searchSweet', (req, res) => {
     });
 });
 
+app.get('/sortSweets', (req, res) => {
+  const { key, order } = req.query;
+
+  try {
+    const result = sortSweets(key, order);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
+
 module.exports = app;
+
