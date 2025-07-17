@@ -6,20 +6,21 @@
 
 const addSweet = require('../src/addSweet');
 const createSweet = require('../src/createSweet');
-const data = require('../src/data');
+const data = require('../model/data');
 
 describe('test addSweet', () => {
     test('should add a sweet to the sweets array', () => {
-        let tempObject = createSweet('kaju katli', 'nut based', 50, 20);
-        addSweet(tempObject);
+        const sweet = addSweet('kaju katli', 'nut based', 50, 20);
 
-        expect(data).toContainEqual({
+        expect(sweet).toEqual({
             id: 1001,
             name: 'kaju katli',
             category: 'nut based',
             price: 50,
             quantity: 20
         });
+
+        expect(data).toContainEqual(sweet); 
     });
 });
 
