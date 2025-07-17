@@ -59,4 +59,26 @@ app.get('/viewSweets', (req, res) => {
   }
 })
 
+
+
+app.put('/updateSweet/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, category, price, quantity } = req.body;
+
+  const updates = {};
+
+  if (name !== undefined) updates.name = name;
+  if (category !== undefined) updates.category = category;
+  if (price !== undefined) updates.price = Number(price);
+  if (quantity !== undefined) updates.quantity = Number(quantity);
+
+  try {
+    const result = updateSweet(Number(id), updates);
+    res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 module.exports = app;
