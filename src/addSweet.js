@@ -18,7 +18,7 @@ function addSweet(name,category,price,quantity) {
         data.push(sweet);
         return sweet;
     }catch (error) {
-        console.error("Error adding sweet:", error.message);
+        console.error(message);
     }
 }
 
