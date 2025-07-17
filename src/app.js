@@ -80,5 +80,15 @@ app.put('/updateSweet/:id', (req, res) => {
   }
 });
 
+// GET /searchSweet?term=whatever
+app.get('/searchSweet', (req, res) => {
+    const term = req.query.term;
+    const result = searchSweet(term);
+
+    res.status(200).json({
+        count: result.length,
+        sweets: result
+    });
+});
 
 module.exports = app;
