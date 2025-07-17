@@ -31,7 +31,7 @@ A simple, fully-tested Sweet Shop Management System built with Node.js and Expre
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Dharmiklakhankiya/Sweet-Shop-Management-System
    cd Sweet Shop Management System
    ```
 2. Install dependencies:
