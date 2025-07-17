@@ -17,7 +17,7 @@ A simple, fully-tested Sweet Shop Management System built with Node.js and Expre
 - **Optional Frontend:** Simple web interface for inventory management (if implemented).
 
 ## TDD & Development Journey
-- All futility features were developed using TDD: tests were written before code.
+- All utility features were developed using TDD: tests were written before code.
 - High test coverage with meaningful test cases for all operations and edge cases.
 - Frequent, descriptive Git commits document the development process and learning journey.
 - AI assistance was used transparently and marked in commit messages.
