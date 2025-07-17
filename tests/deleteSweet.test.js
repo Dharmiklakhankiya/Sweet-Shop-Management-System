@@ -49,4 +49,14 @@ describe('deleteSweet - invalid input', () => {
     });
 });
 
+describe('deleteSweet - edge cases', () => {
+    test('should throw an error if trying to delete from empty data', () => {
+        expect(() => deleteSweet(1001)).toThrow('Sweet not found');
+    });
 
+    test('should throw an error when deleting same ID twice', () => {
+        const sweet = addSweet('sandesh', 'bengali', 18, 20);
+        deleteSweet(sweet.id);
+        expect(() => deleteSweet(sweet.id)).toThrow('Sweet not found');
+    });
+});
