@@ -5,8 +5,8 @@
  */
 
 const data = require('../model/data');
-const addSweet = require('../src/addSweet');
-const purchaseSweet = require('../src/purchaseSweet');
+const addSweet = require('../src/utils/addSweet');
+const purchaseSweet = require('../src/utils/purchaseSweet');
 
 beforeEach(() => {
     data.length = 0;

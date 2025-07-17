@@ -5,7 +5,7 @@
  * Ensures the original data array remains unchanged and invalid keys return unsorted data.
  */
 
-const sortSweet = require('../src/sortSweet');
+const sortSweet = require('../src/utils/sortSweet');
 const data = require('../model/data');
 
 describe('sortSweet', () => {

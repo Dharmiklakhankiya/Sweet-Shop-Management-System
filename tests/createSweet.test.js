@@ -10,7 +10,7 @@
  * the test ensures datatype of quantity and price is not string
  */
 
-const createSweet = require('../src/createSweet');
+const createSweet = require('../src/utils/createSweet');
 
 describe('createSweet', () => {
     test('should create a sweet object with valid inputs', () => {

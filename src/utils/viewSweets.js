@@ -4,7 +4,7 @@
  * This module exports a function that retrieves all sweets from the data store.
  */
 
-const data = require('../model/data'); 
+const data = require('../../model/data'); 
 
 function viewSweets() {
     return [...data];

@@ -4,7 +4,7 @@
  * The module ensures that the sweet is removed from the data array and returns the deleted sweet object.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Deletes a sweet from the data array based on its ID.

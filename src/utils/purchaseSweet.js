@@ -4,7 +4,7 @@
  * Throws an error if not enough stock or invalid input.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Purchases a sweet by decreasing its quantity.

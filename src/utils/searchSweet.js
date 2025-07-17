@@ -5,7 +5,7 @@
  * If no term is provided, returns all sweets.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Filters sweets by a search term across name and category.

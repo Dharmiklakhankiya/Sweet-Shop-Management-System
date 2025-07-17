@@ -6,7 +6,7 @@
  */
 
 
-const data = require('../model/data');
+const data = require('../../model/data');
 const createSweet = require('./createSweet');
 
 let idCounter = 1001

@@ -3,7 +3,7 @@
  * @description Increases the quantity of a sweet in stock.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Restocks a sweet by increasing its quantity.

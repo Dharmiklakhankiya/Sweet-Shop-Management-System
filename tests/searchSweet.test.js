@@ -4,7 +4,7 @@
  * Ensures correct filtering based on name or category.
  */
 
-const searchSweet = require('../src/searchSweet');
+const searchSweet = require('../src/utils/searchSweet');
 const data = require('../model/data');
 
 describe('searchSweet', () => {

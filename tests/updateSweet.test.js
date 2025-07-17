@@ -12,9 +12,9 @@ let addSweet;
 beforeEach(() => {
     jest.resetModules();
 
-    updateSweet = require('../src/updateSweet');
+    updateSweet = require('../src/utils/updateSweet');
     data = require('../model/data');
-    addSweet = require('../src/addSweet');
+    addSweet = require('../src/utils/addSweet');
     
     data.length = 0;
 })

@@ -4,7 +4,7 @@
  * Returns a new sorted array without modifying the original data.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Sorts sweets by a specified key and order.

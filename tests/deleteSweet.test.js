@@ -13,9 +13,9 @@ beforeEach(() => {
     // Reset module cache to get a clean state before each test
     jest.resetModules();
     // Import fresh instances of deleteSweet and addSweet for isolation
-    deleteSweet = require('../src/deleteSweet');
+    deleteSweet = require('../src/utils/deleteSweet');
     data = require('../model/data');
-    addSweet = require('../src/addSweet');
+    addSweet = require('../src/utils/addSweet');
     // Clear existing sweets data before every test
     data.length = 0;
 });

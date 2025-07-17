@@ -3,7 +3,7 @@
  * @description Updates an existing sweet in the data store safely by ID.
  */
 
-const data = require('../model/data');
+const data = require('../../model/data');
 
 /**
  * Updates an existing sweet in the data store by its ID.

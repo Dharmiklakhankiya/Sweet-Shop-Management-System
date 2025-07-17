@@ -3,9 +3,9 @@
  * @description Tests for the viewSweet function from the application.
  */
 
-const viewSweets = require('../src/viewSweets');
+const viewSweets = require('../src/utils/viewSweets');
 const data = require('../model/data');
-const addSweet = require('../src/addSweet');
+const addSweet = require('../src/utils/addSweet');
 
 describe('viewSweets', () => {
     beforeEach(() => {

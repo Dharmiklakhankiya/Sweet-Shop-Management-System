@@ -13,7 +13,7 @@ let data;
  */
 beforeEach(() => {
     jest.resetModules(); // 🔁 resets addSweet & idCounter
-    addSweet = require('../src/addSweet'); // re-import fresh copy
+    addSweet = require('../src/utils/addSweet'); // re-import fresh copy
     data = require('../model/data');
     data.length = 0; // clear previous sweet entries
 });
