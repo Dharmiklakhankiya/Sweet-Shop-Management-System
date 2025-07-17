@@ -1,0 +1,20 @@
+meta {
+  name: addSweet
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/addSweet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"jalebi",
+    "category":"sugar and chekpea based spiral",
+    "price":"30",
+    "quantity":"40"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: searchSweet
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/searchSweet?term=kaju%20katli
+  body: none
+  auth: inherit
+}
+
+params:query {
+  term: kaju katli
+}

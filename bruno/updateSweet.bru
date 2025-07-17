@@ -1,0 +1,17 @@
+meta {
+  name: updateSweet
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:3000/updateSweet/1005
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"kaju katli"
+  }
+}

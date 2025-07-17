@@ -1,0 +1,17 @@
+meta {
+  name: restockSweet
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://localhost:3000/restockSweet/2
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "amount":"3000"
+  }
+}

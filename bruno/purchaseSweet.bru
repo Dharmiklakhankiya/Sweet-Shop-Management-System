@@ -1,0 +1,17 @@
+meta {
+  name: purchaseSweet
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://localhost:3000/purchaseSweet/3
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "amount": 2
+  }
+}
