@@ -36,7 +36,7 @@ describe('updateSweet - successful updates', () => {
 
         const updated = updateSweet(sweet.id, { price: 60, quantity: 10 });
 
-        expect(updated).toEqual({ id: sweet.id, name: 'kaju katli', type: 'nut based', price: 60, quantity: 10 });
+        expect(updated).toEqual({ id: sweet.id, name: 'kaju katli', category: 'nut based', price: 60, quantity: 10 });
         expect(data).toContainEqual(updated);
     });
 })
