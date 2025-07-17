@@ -1,5 +1,8 @@
 # Sweet Shop Management System
 
+> **Reason for Creation**
+> This project was developed as part of the Incubyte recruitment process. The objective was to demonstrate proficiency in Test-Driven Development (TDD), clean coding practices, and professional workflows by building a Sweet Shop Management System from scratch. All requirements and features were implemented according to the coding kata provided by Incubyte.
+
 A simple, fully-tested Sweet Shop Management System built with Node.js and Express, following Test-Driven Development (TDD) principles. This project was created as a coding kata and learning exercise, with a focus on clean code, maintainability, and professional workflows.
 
 ## Features
