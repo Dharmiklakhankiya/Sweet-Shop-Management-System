@@ -37,3 +37,15 @@ describe('deleteSweet - successful deletion', () => {
         expect(data).toEqual([sweet1, sweet3]);
     });
 });
+
+describe('deleteSweet - invalid input', () => {
+    test('should throw an error if ID does not exist', () => {
+        addSweet('barfi', 'milk based', 20, 5);
+        expect(() => deleteSweet(9999)).toThrow('Sweet not found');
+    });
+
+    test('should throw an error if ID is not a number', () => {
+        expect(() => deleteSweet('not-a-number')).toThrow('Invalid ID: must be a number');
+    });
+});
+
