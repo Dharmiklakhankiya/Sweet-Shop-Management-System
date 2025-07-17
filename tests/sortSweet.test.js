@@ -1,3 +1,10 @@
+/**
+ * @file sortSweet.test.js
+ * @description Unit tests for the sortSweet function.
+ * Validates sorting by name, price, quantity, and category in both ascending and descending order.
+ * Ensures the original data array remains unchanged and invalid keys return unsorted data.
+ */
+
 const sortSweet = require('../src/sortSweet');
 const data = require('../model/data');
 

@@ -1,5 +1,18 @@
+/**
+ * @module sortSweet
+ * @description Sorts the sweets in the data array based on a given key and order.
+ * Returns a new sorted array without modifying the original data.
+ */
+
 const data = require('../model/data');
 
+/**
+ * Sorts sweets by a specified key and order.
+ *
+ * @param {string} key - The property to sort by. Valid keys: 'name', 'price', 'quantity', 'category'.
+ * @param {string} [order='asc'] - The sorting order. Can be 'asc' for ascending or 'desc' for descending.
+ * @returns {Array<Object>} A new array of sweets sorted by the specified key and order.
+ */
 function sortSweet(key, order = 'asc') {
   const validKeys = ['name', 'price', 'quantity', 'category'];
   if (!validKeys.includes(key)) return data;
