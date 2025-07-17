@@ -102,6 +102,17 @@ app.get('/sortSweets', (req, res) => {
   }
 });
 
+app.put('/restockSweet/:id', (req, res) => {
+  const { id } = req.params;
+  const { amount } = req.body;
+
+  try {
+    const updatedSweet = restockSweet(Number(id), Number(amount));
+    res.status(200).json(updatedSweet);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 
 
