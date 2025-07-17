@@ -14,7 +14,7 @@ const data = require('../../model/data');
  * @returns {Array<Object>} A new array of sweets sorted by the specified key and order.
  */
 function sortSweet(key, order = 'asc') {
-  const validKeys = ['name', 'price', 'quantity', 'category'];
+  const validKeys = ['name', 'price', 'quantity', 'category' ,'id'];
   if (!validKeys.includes(key)) return data;
 
   const sorted = [...data].sort((a, b) => {
