@@ -7,13 +7,18 @@
 
 const data = require('../model/data');
 
+/**
+ * Filters sweets by a search term across name and category.
+ *
+ * @param {string} term - The search string. If null, undefined, or empty, returns all sweets.
+ * @returns {Array<Object>} Filtered list of sweets matching the term.
+ */
 function searchSweet(term) {
-
     if (!term || typeof term !== 'string' || term.trim() === '') {
         return [...data]; 
     }
 
-    const lowerTerm = term.toLowerCase();
+    const lowerTerm = term.trim().toLowerCase();
 
     return data.filter(sweet =>
         sweet.name.toLowerCase().includes(lowerTerm) ||
