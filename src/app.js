@@ -49,4 +49,14 @@ app.delete('/deleteSweet/:id', (req, res) => {
 })
 
 
+app.get('/viewSweets', (req, res) => {
+  try {
+    const result = viewSweets();
+    res.status(200).json(result);
+  }
+  catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+})
+
 module.exports = app;
