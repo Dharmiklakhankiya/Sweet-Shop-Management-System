@@ -12,7 +12,6 @@ const addSweet = require('../src/addSweet');
 BeforeEach(() => {
     jest.resetModules(); //  resets deleteSweet & data
     data.length = 0; // clear previous sweet entries
-    addSweet('kaju katli', 'nut based', 50, 20); // Add a sweet to test deletion
 })
 
 describe('deleteSweet', () => {
