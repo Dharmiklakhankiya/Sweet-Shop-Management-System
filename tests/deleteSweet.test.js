@@ -5,16 +5,19 @@
  * This module tests the deleteSweet function, ensuring it removes the correct sweet and updates the data array.
  */
 
-const deleteSweet = require('../src/deleteSweet');
-const data = require('../model/data');
-const addSweet = require('../src/addSweet');
+let deleteSweet;
+let data;
+let addSweet;
 
-BeforeEach(() => {
-    jest.resetModules(); //  resets deleteSweet & data
-    data.length = 0; // clear previous sweet entries
-})
+beforeEach(() => {
+    jest.resetModules();
+    deleteSweet = require('../src/deleteSweet');
+    data = require('../model/data');
+    addSweet = require('../src/addSweet');
+    data.length = 0;
+});
 
-describe('deleteSweet', () => {
+describe('deleteSweet - successful deletion', () => {
     test('should delete a sweet by ID and return the deleted sweet', () => {
         const sweet = addSweet('rasgulla', 'syrup based', 30, 10);
         const deleted = deleteSweet(sweet.id);
@@ -23,4 +26,14 @@ describe('deleteSweet', () => {
         expect(data).not.toContainEqual(sweet);
     });
 
-})
+    test('should delete only the specified sweet', () => {
+        const sweet1 = addSweet('jalebi', 'syrup based', 15, 25);
+        const sweet2 = addSweet('laddu', 'nut based', 10, 30);
+        const sweet3 = addSweet('peda', 'milk based', 12, 50);
+
+        const deleted = deleteSweet(sweet2.id);
+
+        expect(deleted).toEqual(sweet2);
+        expect(data).toEqual([sweet1, sweet3]);
+    });
+});
