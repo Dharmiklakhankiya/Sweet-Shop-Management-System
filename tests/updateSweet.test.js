@@ -24,9 +24,9 @@ describe('updateSweet - successful updates', () => {
 
         const sweet = addSweet('gulab jamun', 'syrup based', 20, 15);
         
-        const updated = updateSweet(sweet.id, { name: 'gulab jamun', type: 'syrup based', price: 25, quantity: 20 });
+        const updated = updateSweet(sweet.id, { name: 'gulab jamun', category: 'syrup based', price: 25, quantity: 20 });
 
-        expect(updated).toEqual({ id: sweet.id, name: 'gulab jamun', type: 'syrup based', price: 25, quantity: 20 });
+        expect(updated).toEqual({ id: sweet.id, name: 'gulab jamun', category: 'syrup based', price: 25, quantity: 20 });
         expect(data).toContainEqual(updated);
     });
 
