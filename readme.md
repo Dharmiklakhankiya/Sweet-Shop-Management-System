@@ -74,7 +74,7 @@ A simple, fully-tested Sweet Shop Management System built with Node.js and Expre
 ├── model/
 ├── tests/
 ├── bruno/ (API client requests)
-├── public/ (frontend, if implemented)
+├── public/ (frontend)
 ├── index.js
 ├── package.json
 └── README.md
